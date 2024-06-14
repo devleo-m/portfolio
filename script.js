@@ -9,3 +9,17 @@ window.addEventListener('scroll', function() {
     }
     ultimaPosicaoScroll = posicaoAtualScroll;
 });
+
+// JavaScript para adicionar a classe 'fixed-menu' ao header após passar pelo banner
+document.addEventListener('DOMContentLoaded', (event) => {
+    const header = document.querySelector('header'); // Selecione o elemento header
+    const bannerHeight = document.querySelector('.banner').offsetHeight; // Altura do banner
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > bannerHeight) {
+            header.classList.add('fixed-menu'); // Adiciona a classe para fixar o menu
+        } else {
+            header.classList.remove('fixed-menu'); // Remove a classe para desfixar o menu
+        }
+    });
+});
