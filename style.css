@@ -381,3 +381,59 @@ display: none;
     width: 60px;
     margin-right: 10px; /* Espaço entre as imagens */
 } 
+
+/* ABOUT */
+.about {
+    margin-top: 30px;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between;
+}
+
+.container-about {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.about-img {
+    flex: 1; /* Ajuste a largura da imagem conforme necessário */
+    order: -1; /* Move a imagem para o lado esquerdo */
+}
+
+.about-img img {
+  width: 90%;
+}
+
+.about-msg {
+    flex: 1; /* Ajuste a largura das mensagens conforme necessário */
+    text-align: left; /* Alinha as mensagens para o lado direito */
+}
+
+.about-msg h1 {
+  color: var(--verde);
+  font-size: 0.8rem; /* Ajuste o tamanho conforme necessário */
+}
+
+.about-msg h2 {
+  font-size: 3rem; /* Tamanho grande para o texto */
+  color: rgb(239, 243, 236);
+}
+
+.about-msg p {
+  color: #b1bba5; /* Um branco um pouco mais escuro para os parágrafos */
+}
+
+.about-msg p:last-of-type {
+  color: #e3eadc67; /* Um cinza bem claro para o último parágrafo */
+}
+
+.container-about .button-cv{
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+    border-radius: 20px;
+}
