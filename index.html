@@ -214,13 +214,13 @@
         <h3>Projeto Back-end 4</h3>
       </div>  
       <!-- Projetos Full-stack -->
-      <div class="project-card full-stack" style="display: none;">
+      <!-- <div class="project-card full-stack" style="display: none;">
         <h3>Projeto Full-stack 1</h3>
-      </div>  
+      </div>   -->
       <!-- Projetos Mobile -->
-      <div class="project-card mobile" style="display: none;">
+      <!-- <div class="project-card mobile" style="display: none;">
         <h3>Projeto Mobile 1</h3>
-      </div>
+      </div> -->
     </div>
     <a id="loadMore" onclick="loadMoreProjects()">See More</a>
   </section>
@@ -234,59 +234,7 @@
   </footer>
     <!-- JavaScript-->
     <script src="script.js"></script>
-    <script>
-    //Botao para visualizar mais projetos:
-    document.addEventListener('DOMContentLoaded', function() {
-  let currentCount = 4;
-  let currentFilter = 'all';
+    <script src="filtro.js"></script>
 
-  function filterSelection(filter, event) {
-    event.preventDefault();
-    currentFilter = filter;
-    currentCount = 4; // Reseta o contador sempre que um novo filtro é aplicado
-    updateProjectDisplay();
-  }
-
-  function loadMoreProjects() {
-    currentCount += 2;
-    updateProjectDisplay();
-  }
-
-  function updateProjectDisplay() {
-    let projects = document.querySelectorAll('.project-card');
-    let count = 0;
-
-    for (let i = 0; i < projects.length; i++) {
-      if (currentFilter === 'all' || projects[i].classList.contains(currentFilter)) {
-        projects[i].style.display = count < currentCount ? 'block' : 'none';
-        count++;
-      } else {
-        projects[i].style.display = 'none';
-      }
-    }
-
-    if (count <= currentCount || currentFilter !== 'all' && count < currentCount) {
-      document.getElementById('loadMore').style.display = 'none';
-    } else {
-      document.getElementById('loadMore').style.display = 'block';
-    }
-  }
-
-  // Adiciona o evento de clique aos botões de filtro
-  let filterButtons = document.querySelectorAll('.filter-buttons a');
-  for (let button of filterButtons) {
-    button.addEventListener('click', function(event) {
-      filterSelection(button.getAttribute('onclick').split("'")[1], event);
-    });
-  }
-
-  // Chama a função uma vez para configurar a exibição inicial
-  updateProjectDisplay();
-
-  // Adiciona o evento de clique ao botão 'loadMore'
-  document.getElementById('loadMore').addEventListener('click', loadMoreProjects);
-});
-
-    </script>
 </body>
 </html>
