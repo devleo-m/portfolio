@@ -596,3 +596,8 @@ display: none;
     background-color: var(--verde); /* Cor de fundo para o botão ativo */
     color: #0f1216;
 }
+
+.disabled {
+    pointer-events: none; /* Desativa eventos de clique */
+    opacity: 0.5; /* Deixa o botão mais transparente para indicar que está desabilitado */
+  }
