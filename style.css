@@ -10,11 +10,11 @@
     --verde: #a5f251;
     --background-preto: #0f1216;
     --background-preto-secundario: #282d34;
-    --branco: #B0A8B9;
+    --branco: #a8b9b3;
 }
 
 body{
-    background-color: #0a0b0e;
+    background-color: #0f1216;
 }
 
 /* 
@@ -32,7 +32,7 @@ COLOR BRANCO: #B0A8B9
 
 /* Adicione este CSS no seu documento */
 .bg-top-bar{
-    background-color: #0a0b0e;
+    background-color: #0f1216;
     padding: 0 2%;
 }
 
@@ -79,6 +79,7 @@ strong{
 }
 
 header {
+    padding: 0 2%;
     background-image: linear-gradient(to right, #1e2424, #181d23);
     left: 0; /* Adicionado para centralizar */
     right: 0; /* Adicionado para centralizar */
@@ -136,6 +137,10 @@ a:hover {
 .icon-menu{
     color: white;
     font-size: 30px;
+}
+
+.icon-menu:hover{
+    color: var(--verde);
 }
 
 /* HEADER RESPONSIVO*/
@@ -212,32 +217,141 @@ a:hover {
     color: var(--verde);
 }
 
-
-
 .banner{
-    height: 100vh;
-    text-align: center;
-    color: white;
-    position: relative; /* ou absolute, dependendo do layout do seu site */
-    z-index: 0; /* Adicionado para ficar acima do header */
+    margin: 100px 0px;
+    padding: 0 2%;
 }
-.texto-banner {
+
+/* Estilos para o banner */
+.container-banner {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--background-preto); /* Cor de fundo do banner */
+}
+
+.banner-msg {
+    flex-basis: 50%;
+    color: var(--branco);
+}
+
+h1{
+    color: rgba(255, 255, 255, 0.904);
+}
+
+.banner-button{
+    display: flex;
+}
+button{
+    padding: 10px;
+    width: 100%;
+    margin: 0 10px;
+    border: none;
+    background-color: var(--verde);
+}
+
+button:hover{
+    background-color: #7ac727;
+}
+
+.button-cv{
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border: 1px solid var(--verde);
+}
+.button-cv:hover{
+    background-color: var(--verde);
+    color: #0f1216;
+}
+
+/* BANNER IMAGEM */
+
+.banner-img {
+    flex-basis: 35%;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .banner-img::before,
+  .banner-img::after {
+    content: '';
     position: absolute;
+    background-image: url('./assets/points-img.svg');
+    background-size: cover;
+    z-index: -1;
+  }
+  
+  .banner-img::before {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-}
-.imagem-banner{
-    height: 100%;
-    width: 100%;
-    filter: brightness(50%);
-}
+    transform: translate(-100%, 0%) rotate(-45deg);
+    width: 60%; /* Ajuste conforme necessário */
+    height: 60%; /* Ajuste conforme necessário */
+  }
+  
+  .banner-img::after {
+    top: 50%;
+    right: 50%;
+    transform: translate(100%, -100%) rotate(-225deg);
+    width: 60%; /* Ajuste conforme necessário */
+    height: 60%; /* Ajuste conforme necessário */
+  }
+  
+  .banner-img img {
+    display: block;
+    max-width: 100%;
+    margin: 10px;
+    border-radius: 40px; /* Bordas arredondadas para a imagem */
+  }
+  
+  @media (max-width: 800px) {
+    .banner{
+        margin: 100px 0px;
+        padding: 0 2%;
+    }
+    
+    /* Estilos para o banner */
+    .container-banner {
+        width: 100%;
+        max-width: 900px;
+        margin: auto;
+        display: inline-block;
+        padding: 20px;
+        background-color: var(--background-preto); /* Cor de fundo do banner */
+    }
 
-img{
-    height: 100%;
-}
+    .banner-img {
+display: none;
+      }
+  }
 
-footer{
-    height: 900px;
-}
+/*################ EFEITO IMAGEM - BANNER ################*/
+/* @keyframes moveGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .imagem-com-borda {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .imagem-com-borda::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -325px; 
+    width: calc(100% + 20px); 
+    height: calc(100% + 20px); 
+    background: linear-gradient(-45deg, #a5f251, #0f1216 , #0f1216, #a5f251);
+    background-size: 400% 400%;
+    border-radius: 30px;
+    animation: moveGradient 8s ease infinite;
+    z-index: -3;
+  } 
+  */
