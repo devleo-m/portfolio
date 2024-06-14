@@ -34,7 +34,6 @@ COLOR BRANCO: #B0A8B9
 .bg-top-bar{
     background-color: #0a0b0e;
     padding: 0 2%;
-
 }
 
 .top-bar {
@@ -57,12 +56,13 @@ strong{
     color: var(--verde);
 }
 
-.icon {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-size: cover;
-    margin-left: 10px;
+.social-icons{
+    text-align: right;
+}
+
+.fab{
+    font-size: 1.3rem;
+    margin-right: 10px;
 }
 
 .github { background-image: url('https://github.com/devleo-m'); }
@@ -135,6 +135,7 @@ a:hover {
 
 .icon-menu{
     color: white;
+    font-size: 30px;
 }
 
 /* HEADER RESPONSIVO*/
@@ -158,6 +159,60 @@ a:hover {
         display: block; /* Mostra a lista de navegação */
     }
 }
+
+/* MENU LATERAL*/
+/* Estilo do Menu Lateral */
+.menu-lateral {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: var(--background-preto-secundario);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+/* Estilo dos links do menu */
+.menu-lateral a {
+    padding: 1px 1px 10px 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.928);
+    display: block;
+    transition: 0.3s;
+}
+
+/* Estilo do ícone de fechar */
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+/* Estilo dos ícones de contato no menu lateral */
+.social-icons2 {
+    position: absolute;
+    bottom: 10px;
+
+}
+
+.social-icons2 a {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.928);
+    cursor: pointer;
+    font-size: 1.5rem;
+    
+}
+
+.social-icons2 a:hover{
+    color: var(--verde);
+}
+
+
 
 .banner{
     height: 100vh;

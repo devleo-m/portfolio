@@ -23,3 +23,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
+
+// Função para abrir o menu lateral
+function openNav() {
+    document.getElementById("menu-lateral").style.width = "50%";
+}
+
+// Função para fechar o menu lateral
+function closeNav() {
+    document.getElementById("menu-lateral").style.width = "0";
+}
+
+// Adicionando evento de clique ao ícone do menu hambúrguer
+document.querySelector('.hamburger-menu').addEventListener('click', openNav);
