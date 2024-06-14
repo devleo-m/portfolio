@@ -355,3 +355,29 @@ display: none;
     z-index: -3;
   } 
   */
+
+/* CAROUSEL */
+.carousel {
+    display: flex;
+    overflow-x: hidden; /* Esconde as imagens fora da área visível */
+    scroll-behavior: smooth;
+    background: linear-gradient(to right, #1e2424, #181d23);
+    width: 100%;
+    justify-content: center; /* Centraliza o container no carrossel */
+}
+
+.container {
+    display: flex;
+    width: 900px; /* Largura fixa para o container */
+    height: 100px;
+    margin: 0 auto; /* Centraliza o container no carrossel */
+    align-items: center;
+    justify-content: center; /* Centraliza o container no carrossel */
+    overflow: hidden; /* Adiciona esta linha para ocultar o que estiver fora do container */
+
+}
+
+.container img {
+    width: 60px;
+    margin-right: 10px; /* Espaço entre as imagens */
+} 
