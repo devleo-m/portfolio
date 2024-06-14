@@ -150,7 +150,34 @@ function updateActiveButton() {
     });
   }
   
-  // Chama a função updateActiveButton quando a página carrega e quando há mudanças na URL
-  document.addEventListener('DOMContentLoaded', updateActiveButton);
-  window.addEventListener('popstate', updateActiveButton);
-  
+    // Chama a função updateActiveButton quando a página carrega e quando há mudanças na URL
+    document.addEventListener('DOMContentLoaded', updateActiveButton);
+    window.addEventListener('popstate', updateActiveButton);
+
+    //Botao para visualizar mais projetos:
+    document.addEventListener('DOMContentLoaded', function() {
+        let currentCount = 4;
+      
+        function loadMoreProjects() {
+            console.log('Carregando mais projetos...');
+            let projects = document.querySelectorAll('.project-card');
+            console.log('Total de projetos encontrados:', projects.length);
+            for (let i = 0; i < projects.length; i++) {
+              console.log('Projeto', i, 'display antes:', projects[i].style.display);
+              projects[i].style.display = i < currentCount ? 'block' : 'none';
+              console.log('Projeto', i, 'display depois:', projects[i].style.display);
+            }
+            currentCount += 2;
+            console.log('Novo currentCount:', currentCount);
+            if (currentCount >= projects.length) {
+              document.getElementById('loadMore').style.display = 'none';
+            }
+          }
+      
+        // Chama a função uma vez para configurar a exibição inicial
+        loadMoreProjects();
+      
+        // Adiciona o evento de clique ao botão 'loadMore'
+        document.getElementById('loadMore').addEventListener('click', loadMoreProjects);
+      });
+      
