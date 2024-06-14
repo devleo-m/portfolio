@@ -437,3 +437,74 @@ display: none;
     width: 100%;
     border-radius: 20px;
 }
+
+
+/* SKILL !!!*/
+#skills h1{
+    text-align: center;
+    margin: 30px 0px;
+  }
+
+  .skill-msg{
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 0 2%;
+  }
+  
+  .skill-msg h1{
+    font-size: 1.4rem;
+    color: var(--verde);
+  }
+
+  .skill-msg p{
+    margin-bottom: 30px;
+    color: #b1bba5;
+
+  }
+
+  .container-skill{
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: auto;
+    padding: 0 1%;
+
+  }
+
+  .skill-card {
+    flex-basis: calc(33% - 20px); /* Ajuste para 3 cards por linha com espaçamento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #1e2424, #181d23);
+    text-align: center;
+  }
+  
+  .skill-card h2 {
+    margin-bottom: 10px;
+    color: var(--verde);
+    font-size: 1.5rem;
+  }
+
+  .skill-card i{
+    color: rgb(233, 239, 228);
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .skill-card h3 {
+    margin-bottom: 10px;
+    color: #ced9c7;
+    font-size: 1.2em;
+  }
+  
+  .skill-card p {
+    color: #818580;
+    margin-bottom: 5px;
+  }
+  
+  
