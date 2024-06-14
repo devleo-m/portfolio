@@ -31,14 +31,11 @@ COLOR BRANCO: #B0A8B9
 /* HEADER */
 
 /* Adicione este CSS no seu documento */
-.bg-top-bar{
-    background-color: #0f1216;
-    padding: 0 2%;
-}
+
 
 .top-bar {
     color: white;
-    padding: 5px;
+    padding: 5px 2%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,7 +59,7 @@ strong{
 
 .fab{
     font-size: 1.3rem;
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .github { background-image: url('https://github.com/devleo-m'); }
@@ -103,31 +100,40 @@ nav {
     color: #a5f251;
 }
 /* Reset padrão para listas */
-ul {
+nav ul {
     list-style: none; /* Remove as bolinhas */
     padding: 0;
     margin: 0;
 }
 
 /* Estilização do menu */
-li {
+nav li {
     display: inline-block; /* Exibe os itens do menu na horizontal */
     margin-left: 20px; /* Espaçamento entre os itens do menu */
 }
 
 /* Links do menu */
-a {
+nav a {
     text-decoration: none; /* Remove o sublinhado dos links */
     color: #edf3f1; /* Define a cor do texto dos links */
     font-weight: bold; /* Deixa o texto dos links em negrito */
 }
 
 /* Mudança de cor ao passar o mouse */
-a:hover {
+nav a:hover {
     /* Gradiente linear que vai do roxo para o preto e termina no branco */
     background-image: linear-gradient(to right, #a5f251, #8ed445, #a5f251);
     -webkit-background-clip: text;
     color: transparent; /* Torna o texto transparente para mostrar o gradiente */
+}
+
+.social-icons a{
+    color: #dfebe6;
+    text-decoration: none;
+}
+
+.social-icons a:hover{
+    color: #7ac727;
 }
 
 .hamburger-menu {
@@ -472,6 +478,7 @@ display: none;
     justify-content: center;
     margin: auto;
     padding: 0 1%;
+    margin-bottom: 40px;
 
   }
 
@@ -507,4 +514,85 @@ display: none;
     margin-bottom: 5px;
   }
   
+  /*Projects*/
+
+  /* Estilo da seção de projetos */
+
+ /* Estilo da seção de projetos */
+
+ #projects{
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+  }
+  #projects h1 {
+    margin: 20px;
+    text-align: center;
+    color: var(--verde);
+    font-size: 1.4rem;
+  }
   
+  /* Estilo dos botões de filtro */
+  .filter-buttons{
+    width: 100%;
+    color: #a8b9b3; 
+    display: flex; /* Isso faz com que os botões fiquem lado a lado */
+    flex-wrap: wrap; /* Isso permite que os botões passem para a próxima linha se não houver espaço suficiente */
+    justify-content: center; /* Isso centraliza os botões no contêiner */
+    margin-bottom: 20px; /* Isso adiciona um espaço abaixo dos botões antes dos cartões de projeto */
+  }
+  
+  .filter-buttons a {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #a8b9b3;
+    border: 1px solid var(--verde);
+    border-radius: 30px;
+    text-decoration: none;
+  }
+  
+  .filter-buttons a:hover{ 
+    color: #a8b9b3;   
+  }
+  /* Estilo dos cartões de projeto */
+  .project-card {
+    display: none; /* Escondido por padrão */
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd; /* Borda do cartão */
+    background-color: #fff; /* Cor de fundo do cartão */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra do cartão */
+  }
+  
+  /* Cartões que devem ser mostrados */
+  .project-card.show {
+    display: block;
+  }
+  
+  /* Responsividade: cartões em colunas em telas maiores */
+  @media (min-width: 600px) {
+    .project-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .project-card {
+      width: calc(50% - 20px); /* Largura dos cartões com margem */
+    }
+  }
+  
+  /* Responsividade: cartões em uma única coluna em telas menores */
+  @media (max-width: 599px) {
+    .project-card {
+      width: 100%;
+    }
+  }
+  
+  /* Estilo para o botão ativo */
+.filter-buttons a.active {
+    background-color: var(--verde); /* Cor de fundo para o botão ativo */
+    color: #0f1216;
+}
