@@ -121,12 +121,12 @@
       <p>Uma busca constante pela excelência, minhas habilidades em tecnologia são mais do que apenas uma paixão; são uma expressão da minha dedicação em transformar ideias em realidades. Cada linha de código é escrita com o compromisso de criar soluções que não apenas atendam, mas superem as expectativas, garantindo que cada projeto seja uma vitrine da mais alta qualidade.</p>
     </div>
     <div class="container-skill">
-    <div class="skill-card">
+    <!-- <div class="skill-card">
       <h2>Web</h2>
       <i class="fa-solid fa-desktop"></i>      
       <h3>HTML, CSS & JavaScript</h3>
       <p>Criação de interfaces dinâmicas e responsivas.</p>
-    </div>
+    </div> -->
     <div class="skill-card">
       <h2>Front-end</h2>
       <i class="fa-regular fa-file-code"></i>
@@ -157,22 +157,23 @@
       <h3>Flutter</h3>
       <p>Prototipagem de aplicativos móveis.</p>
     </div>
-    <div class="skill-card">
+    <!-- <div class="skill-card">
       <h2>WordPress</h2>
       <i class="fa-brands fa-wordpress-simple"></i>
       <h3>Php</h3>
       <p>Soluções completas com WordPress.</p>
-    </div>
-    <div class="skill-card">
+    </div> -->
+    <!-- <div class="skill-card">
       <h2>Design</h2>
       <i class="fa-solid fa-pen-nib"></i>
       <h3>UI/UX</h3>
       <p>Design intuitivo focado na experiência do usuário.</p>
-    </div>
+    </div> -->
   </div>
   </section>
 
   <hr>
+
 
   <section id="projects">
     <h1>Projects</h1>
@@ -185,39 +186,46 @@
         <a onclick="filterSelection('mobile', event)">Mobile</a>
       </div>
     </div>
-
-    <!-- Adicione seus projetos aqui, cada um com a classe correspondente -->
     <div class="project-container">
       <!-- Projetos Front-end -->
-      <div class="project-card front-end">
+      <div class="project-card front-end" style="display: none;">
         <h3>Projeto Front-end 1</h3>
-        <!-- Informações do projeto -->
       </div>
-      <!-- Mais projetos front-end -->
-  
+      <div class="project-card front-end" style="display: none;">
+        <h3>Projeto Front-end 2</h3>
+      </div>  
+      <div class="project-card front-end" style="display: none;">
+        <h3>Projeto Front-end 3</h3>
+      </div>  
+      <div class="project-card front-end" style="display: none;">
+        <h3>Projeto Front-end 4</h3>
+      </div>    
       <!-- Projetos Back-end -->
-      <div class="project-card back-end">
+      <div class="project-card back-end " style="display: none;">
         <h3>Projeto Back-end 1</h3>
-        <!-- Informações do projeto -->
-      </div>
-      <!-- Mais projetos back-end -->
-  
+      </div> 
+      <div class="project-card back-end " style="display: none;">
+        <h3>Projeto Back-end 2</h3>
+      </div>  
+      <div class="project-card back-end " style="display: none;">
+        <h3>Projeto Back-end 3</h3>
+      </div>  
+      <div class="project-card back-end " style="display: none;">
+        <h3>Projeto Back-end 4</h3>
+      </div>  
       <!-- Projetos Full-stack -->
-      <div class="project-card full-stack">
+      <div class="project-card full-stack" style="display: none;">
         <h3>Projeto Full-stack 1</h3>
-        <!-- Informações do projeto -->
-      </div>
-      <!-- Mais projetos full-stack -->
-  
+      </div>  
       <!-- Projetos Mobile -->
-      <div class="project-card mobile">
+      <div class="project-card mobile" style="display: none;">
         <h3>Projeto Mobile 1</h3>
-        <!-- Informações do projeto -->
       </div>
-      <!-- Mais projetos mobile -->
     </div>
+    <a id="loadMore" onclick="loadMoreProjects()">See More</a>
   </section>
   
+
   <section>
     <h1>Contato</h1>
   </section>
@@ -226,5 +234,59 @@
   </footer>
     <!-- JavaScript-->
     <script src="script.js"></script>
+    <script>
+    //Botao para visualizar mais projetos:
+    document.addEventListener('DOMContentLoaded', function() {
+  let currentCount = 4;
+  let currentFilter = 'all';
+
+  function filterSelection(filter, event) {
+    event.preventDefault();
+    currentFilter = filter;
+    currentCount = 4; // Reseta o contador sempre que um novo filtro é aplicado
+    updateProjectDisplay();
+  }
+
+  function loadMoreProjects() {
+    currentCount += 2;
+    updateProjectDisplay();
+  }
+
+  function updateProjectDisplay() {
+    let projects = document.querySelectorAll('.project-card');
+    let count = 0;
+
+    for (let i = 0; i < projects.length; i++) {
+      if (currentFilter === 'all' || projects[i].classList.contains(currentFilter)) {
+        projects[i].style.display = count < currentCount ? 'block' : 'none';
+        count++;
+      } else {
+        projects[i].style.display = 'none';
+      }
+    }
+
+    if (count <= currentCount || currentFilter !== 'all' && count < currentCount) {
+      document.getElementById('loadMore').style.display = 'none';
+    } else {
+      document.getElementById('loadMore').style.display = 'block';
+    }
+  }
+
+  // Adiciona o evento de clique aos botões de filtro
+  let filterButtons = document.querySelectorAll('.filter-buttons a');
+  for (let button of filterButtons) {
+    button.addEventListener('click', function(event) {
+      filterSelection(button.getAttribute('onclick').split("'")[1], event);
+    });
+  }
+
+  // Chama a função uma vez para configurar a exibição inicial
+  updateProjectDisplay();
+
+  // Adiciona o evento de clique ao botão 'loadMore'
+  document.getElementById('loadMore').addEventListener('click', loadMoreProjects);
+});
+
+    </script>
 </body>
 </html>
