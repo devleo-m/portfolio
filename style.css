@@ -1,5 +1,188 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Cores */
+:root {
+    --verde: #a5f251;
+    --background-preto: #0f1216;
+    --background-preto-secundario: #282d34;
+    --branco: #B0A8B9;
+}
+
+body{
+    background-color: #0a0b0e;
+}
+
+/* 
+COLOR: verde: #a5f251
+COLOR background-preto: #0f1216
+COLOR background-preto-secundario: #282d34
+COLOR BRANCO: #B0A8B9
+
+            #1e2424
+            #181d23
+*/
+
+
+/* HEADER */
+
+/* Adicione este CSS no seu documento */
+.bg-top-bar{
+    background-color: #0a0b0e;
+    padding: 0 2%;
+
+}
+
+.top-bar {
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+span{
+    font-size: 0.7rem;
+    color: var(--branco);
+}
+
+strong{
+    color: var(--verde);
+}
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    margin-left: 10px;
+}
+
+.github { background-image: url('https://github.com/devleo-m'); }
+.linkedin { background-image: url('https://www.linkedin.com/in/leonardo-madeira-20a8a7237/'); }
+.instagram { background-image: url('https://www.instagram.com/leomadeiraa/'); }
+.whatsapp { background-image: url('https://api.whatsapp.com/send?phone=5548984274450'); }
+
+/* Esta classe será adicionada ao header quando o usuário passar pelo banner */
+.fixed-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.6s;
+}
+
+header {
+    background-image: linear-gradient(to right, #1e2424, #181d23);
+    left: 0; /* Adicionado para centralizar */
+    right: 0; /* Adicionado para centralizar */
+    transition: top 0.5s;
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    height: 70px;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+
+#logo {}
+.text-logo {
+    color: #a5f251;
+}
+/* Reset padrão para listas */
+ul {
+    list-style: none; /* Remove as bolinhas */
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilização do menu */
+li {
+    display: inline-block; /* Exibe os itens do menu na horizontal */
+    margin-left: 20px; /* Espaçamento entre os itens do menu */
+}
+
+/* Links do menu */
+a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #edf3f1; /* Define a cor do texto dos links */
+    font-weight: bold; /* Deixa o texto dos links em negrito */
+}
+
+/* Mudança de cor ao passar o mouse */
+a:hover {
+    /* Gradiente linear que vai do roxo para o preto e termina no branco */
+    background-image: linear-gradient(to right, #a5f251, #8ed445, #a5f251);
+    -webkit-background-clip: text;
+    color: transparent; /* Torna o texto transparente para mostrar o gradiente */
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.icon-menu{
+    color: white;
+}
+
+/* HEADER RESPONSIVO*/
+/* Exibe o menu hambúrguer em telas menores */
+@media (max-width: 540px) {
+    .hamburger-menu {
+        display: block; /* Mostra o menu hambúrguer */
+        cursor: pointer; /* Muda o cursor para indicar que é clicável */
+        background-color: rgba(240, 248, 255, 0);
+        border: none;
+        padding: 0 2;
+    }
+
+    /* Esconde a lista de navegação quando o menu hambúrguer está ativo */
+    ul {
+        display: none;
+    }
+
+    /* Estilos para quando o menu hambúrguer é clicado */
+    .hamburger-menu.active + ul {
+        display: block; /* Mostra a lista de navegação */
+    }
+}
+
+.banner{
+    height: 100vh;
+    text-align: center;
+    color: white;
+    position: relative; /* ou absolute, dependendo do layout do seu site */
+    z-index: 0; /* Adicionado para ficar acima do header */
+}
+.texto-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+.imagem-banner{
+    height: 100%;
+    width: 100%;
+    filter: brightness(50%);
+}
+
+img{
+    height: 100%;
+}
+
+footer{
+    height: 900px;
 }
