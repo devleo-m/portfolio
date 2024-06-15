@@ -653,13 +653,19 @@ display: none;
 
   /**************************************************************/
   /*contact - formulario*/
+  .contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
   
   .container-contact {
     display: flex;
     align-items: center;
     width: 100%;
-    background-color: red;
-    margin: auto !important;
+    justify-content: space-around;
+    max-width: 900px !important;
+    padding: 0 2%;
   }
   
   .contact-img img {
@@ -669,6 +675,7 @@ display: none;
   form {
     max-width: 400px;
     width: 100%;
+    color: rgb(185, 194, 181);
   }
   
   form div {
@@ -687,21 +694,60 @@ display: none;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    resize: none;
   }
   
   .button {
     text-align: right;
   }
   
-  .button button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
+  .container-contact .button-cv {
+    margin: 0;
+  }
+
+  @media (max-width: 800px) {
+    .contact {
+      display: block;
+    }
+    
+    .container-contact {
+      display: block;
+      width: 100%;
+      justify-content: center; /* Adicionado para centralizar */
+      padding: 0 2%;
+    }
+  
+    .contact-img {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .contact-img img {
+      width: 50%;
+      height: auto; /* Mantém a proporção da imagem */
+    }
+    
+  
+    form {
+      margin: auto; /* Adicionado para centralizar o formulário */
+    }
+  }
+
+  /*FOOTER*/
+  footer {
+    background-image: linear-gradient(to right, #1e2424, #181d23);
+    color: #e0ebde; /* Cor do texto */
+    text-align: center; /* Alinhamento do texto */
+    padding: 30px 0; /* Espaçamento interno */
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
   }
   
-  .button button:hover {
-    background-color: #0056b3;
+  footer h1 {
+    margin: 0; /* Remover a margem padrão */
+    font-size: 0.8rem; /* Tamanho da fonte */
   }
+  
+
   
