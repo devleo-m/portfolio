@@ -5,7 +5,6 @@
     font-family: sans-serif;
 }
 
-/* Cores */
 :root {
     --verde: #a5f251;
     --background-preto: #0f1216;
@@ -27,12 +26,7 @@ COLOR BRANCO: #B0A8B9
             #181d23
 */
 
-
 /* HEADER */
-
-/* Adicione este CSS no seu documento */
-
-
 .top-bar {
     color: white;
     padding: 5px 2%;
@@ -67,7 +61,6 @@ strong{
 .instagram { background-image: url('https://www.instagram.com/leomadeiraa/'); }
 .whatsapp { background-image: url('https://api.whatsapp.com/send?phone=5548984274450'); }
 
-/* Esta classe será adicionada ao header quando o usuário passar pelo banner */
 .fixed-menu {
     position: fixed;
     top: 0;
@@ -78,8 +71,8 @@ strong{
 header {
     padding: 0 2%;
     background-image: linear-gradient(to right, #1e2424, #181d23);
-    left: 0; /* Adicionado para centralizar */
-    right: 0; /* Adicionado para centralizar */
+    left: 0; 
+    right: 0; 
     transition: top 0.5s;
     z-index: 1;
 }
@@ -119,9 +112,7 @@ nav a {
     font-weight: bold; /* Deixa o texto dos links em negrito */
 }
 
-/* Mudança de cor ao passar o mouse */
 nav a:hover {
-    /* Gradiente linear que vai do roxo para o preto e termina no branco */
     background-image: linear-gradient(to right, #a5f251, #8ed445, #a5f251);
     -webkit-background-clip: text;
     color: transparent; /* Torna o texto transparente para mostrar o gradiente */
@@ -154,7 +145,7 @@ nav a:hover {
 @media (max-width: 540px) {
     .hamburger-menu {
         display: block; /* Mostra o menu hambúrguer */
-        cursor: pointer; /* Muda o cursor para indicar que é clicável */
+        cursor: pointer;
         background-color: rgba(240, 248, 255, 0);
         border: none;
         padding: 0 2;
@@ -295,23 +286,23 @@ button:hover{
     top: 50%;
     left: 50%;
     transform: translate(-100%, 0%) rotate(-45deg);
-    width: 60%; /* Ajuste conforme necessário */
-    height: 60%; /* Ajuste conforme necessário */
+    width: 60%; 
+    height: 60%; 
   }
   
   .banner-img::after {
     top: 50%;
     right: 50%;
     transform: translate(100%, -100%) rotate(-225deg);
-    width: 60%; /* Ajuste conforme necessário */
-    height: 60%; /* Ajuste conforme necessário */
+    width: 60%; 
+    height: 60%; 
   }
   
   .banner-img img {
     display: block;
     max-width: 100%;
     margin: 10px;
-    border-radius: 40px; /* Bordas arredondadas para a imagem */
+    border-radius: 40px; 
   }
   
   @media (max-width: 800px) {
@@ -327,9 +318,8 @@ button:hover{
         margin: auto;
         display: inline-block;
         padding: 20px;
-        background-color: var(--background-preto); /* Cor de fundo do banner */
+        background-color: var(--background-preto); 
     }
-
     .banner-img {
 display: none;
       }
@@ -385,7 +375,7 @@ display: none;
 
 .container img {
     width: 60px;
-    margin-right: 10px; /* Espaço entre as imagens */
+    margin-right: 10px; 
 } 
 
 /* ABOUT */
@@ -406,8 +396,8 @@ display: none;
 }
 
 .about-img {
-    flex: 1; /* Ajuste a largura da imagem conforme necessário */
-    order: -1; /* Move a imagem para o lado esquerdo */
+    flex: 1; 
+    order: -1; 
 }
 
 .about-img img {
@@ -415,13 +405,13 @@ display: none;
 }
 
 .about-msg {
-    flex: 1; /* Ajuste a largura das mensagens conforme necessário */
-    text-align: left; /* Alinha as mensagens para o lado direito */
+    flex: 1; 
+    text-align: left;
 }
 
 .about-msg h1 {
   color: var(--verde);
-  font-size: 0.8rem; /* Ajuste o tamanho conforme necessário */
+  font-size: 0.8rem; 
 }
 
 .about-msg h2 {
@@ -430,11 +420,11 @@ display: none;
 }
 
 .about-msg p {
-  color: #b1bba5; /* Um branco um pouco mais escuro para os parágrafos */
+  color: #b1bba5; 
 }
 
 .about-msg p:last-of-type {
-  color: #e3eadc67; /* Um cinza bem claro para o último parágrafo */
+  color: #e3eadc67; 
 }
 
 .container-about .button-cv{
@@ -515,11 +505,6 @@ display: none;
   }
   
   /*Projects*/
-
-  /* Estilo da seção de projetos */
-
- /* Estilo da seção de projetos */
-
  #projects{
     width: 100%;
     max-width: 900px;
@@ -564,7 +549,7 @@ display: none;
     box-shadow: 0 4px 8px rgba(177, 246, 134, 0.298); /* Sombra suave */
     margin: 16px; /* Espaçamento ao redor do cartão */
     overflow: hidden; /* Garante que nada saia das bordas arredondadas */
-    display: flex; /* Usa flexbox para layout interno */
+    display: flex; 
     flex-direction: column; /* Organiza os itens em coluna */
     max-width: 300px; /* Largura máxima do cartão */
     padding: 2% 2%;
