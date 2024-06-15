@@ -559,12 +559,51 @@ display: none;
   }
   /* Estilo dos cartões de projeto */
   .project-card {
-    display: none; /* Escondido por padrão */
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid #ddd; /* Borda do cartão */
-    background-color: #fff; /* Cor de fundo do cartão */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra do cartão */
+    background-image: linear-gradient(to right, #1e2424, #181d23);
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(177, 246, 134, 0.298); /* Sombra suave */
+    margin: 16px; /* Espaçamento ao redor do cartão */
+    overflow: hidden; /* Garante que nada saia das bordas arredondadas */
+    display: flex; /* Usa flexbox para layout interno */
+    flex-direction: column; /* Organiza os itens em coluna */
+    max-width: 300px; /* Largura máxima do cartão */
+    padding: 2% 2%;
+  }
+
+  .img-project img {
+    width: 100%; /* Faz a imagem preencher a largura do cartão */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px;
+  }
+
+  .title h1 {
+    font-size: 1.5em; /* Tamanho da fonte do título */
+  }
+  
+  .status-project {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+    color: white; /* Cor do texto */
+    height: 20px;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .status-project i {
+    color: var(--verde);
+    font-size: 20px;
+    padding: 0 5px; /* Adiciona um padding para o ícone */
+  }
+  
+  .status-project p {
+    margin: 0;
+  }
+  
+  .paragrafo-project p {
+    color: #818580;
+    line-height: 1.5; /* Espaçamento entre linhas */
+    font-size: 0.9em; /* Tamanho da fonte do parágrafo */
   }
   
   /* Cartões que devem ser mostrados */
@@ -578,18 +617,13 @@ display: none;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
+      margin: auto;
     }
     .project-card {
-      width: calc(50% - 20px); /* Largura dos cartões com margem */
+      width: calc(90% - 50px); /* Largura dos cartões com margem */
     }
   }
   
-  /* Responsividade: cartões em uma única coluna em telas menores */
-  @media (max-width: 599px) {
-    .project-card {
-      width: 100%;
-    }
-  }
   
   /* Estilo para o botão ativo */
 .filter-buttons a.active {
