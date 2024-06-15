@@ -186,7 +186,8 @@
       </div>
     </div>
     <div class="project-container">
-      <!-- Projetos Front-end -->
+
+      <!-- Projetos Back-end -->
       <div class="project-card back-end" style="display: none;">
         <div class="img-project">
           <img src="./assets/projects/scholar.png" alt="">
@@ -202,25 +203,59 @@
           <p>The Educational System is a robust back-end Rest API developed in Java, using the Spring Boot framework. It was designed to efficiently manage the academic operations of educational institutions, offering a complete solution for managing users, teachers, classes, courses, materials and grades.</p>
         </div>
       </div>
+
+      <!-- Projetos Front-end -->
       <div class="project-card front-end" style="display: none;">
-        <h3>Projeto Front-end 2</h3>
-      </div>  
+        <div class="img-project">
+          <img src="./assets/projects/dt-money.png" alt="">
+        </div>
+        <div class="title">
+          <h1>Dt-Money</h1>
+        </div>
+        <div class="status-project">
+          <i class="fa-regular fa-square-check"></i>
+          <p>Project Completed</p>
+        </div>
+        <div class="paragrafo-project">
+          <p>Web application built with React and TypeScript that allows users to track their financial transactions. Users can input both income and expense values along with detailed descriptions for each transaction.</p>
+        </div>      
+      </div>
+
+      <!-- Projetos Front-end -->
       <div class="project-card front-end" style="display: none;">
-        <h3>Projeto Front-end 3</h3>
-      </div>  
+        <div class="img-project">
+          <img src="./assets/projects/todo-list.png" alt="">
+        </div>
+        <div class="title">
+          <h1>Todo-List</h1>
+        </div>
+        <div class="status-project">
+          <i class="fa-regular fa-square-check"></i>
+          <p>Project Completed</p>
+        </div>
+        <div class="paragrafo-project">
+          <p>The Todo List is a simple to-do list application built with React. It allows users to add, mark as completed, and remove tasks from a list.
+          </p>
+        </div>      
+      </div>
+
+      <!-- Projetos Front-end -->
       <div class="project-card front-end" style="display: none;">
-        <h3>Projeto Front-end 4</h3>
-      </div>    
-      <!-- Projetos Back-end -->
-      <div class="project-card back-end " style="display: none;">
-        <h3>Projeto Back-end 2</h3>
-      </div>  
-      <div class="project-card back-end " style="display: none;">
-        <h3>Projeto Back-end 3</h3>
-      </div>  
-      <div class="project-card back-end " style="display: none;">
-        <h3>Projeto Back-end 4</h3>
-      </div>  
+        <div class="img-project">
+          <img src="./assets/projects/letmeask.png" alt="">
+        </div>
+        <div class="title">
+          <h1>letmeask</h1>
+        </div>
+        <div class="status-project">
+          <i class="fa-regular fa-square-check"></i>
+          <p>Project Completed</p>
+        </div>
+        <div class="paragrafo-project">
+          <p>Let viewers decide which questions the host should answer during a livestream. Developed during @Rocketseat NLW#06 free training.</p>
+        </div>      
+      </div>
+
       <!-- Projetos Full-stack -->
       <!-- <div class="project-card full-stack" style="display: none;">
         <h3>Projeto Full-stack 1</h3>
@@ -233,6 +268,7 @@
     <a id="loadMore" onclick="loadMoreProjects()">See More</a>
   </section>
   
+  <hr>
 
   <section>
     <h1>Contato</h1>
@@ -243,6 +279,22 @@
     <!-- JavaScript-->
     <script src="script.js"></script>
     <script src="filtro.js"></script>
+    <script>
+      // Função para truncar o texto
+function truncarTexto(seletor, limite) {
+  const elementos = document.querySelectorAll(seletor);
+  elementos.forEach(elemento => {
+    if (elemento.innerText.length > limite) {
+      // Trunca o texto e adiciona '...'
+      elemento.innerText = elemento.innerText.substring(0, limite) + '...';
+    }
+  });
+}
+
+// Chama a função para truncar o texto dos parágrafos dos projetos
+truncarTexto('.paragrafo-project p', 147);
+
+    </script>
 
 </body>
 </html>
