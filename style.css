@@ -612,12 +612,13 @@ display: none;
   }
   
   /* Responsividade: cartões em colunas em telas maiores */
-  @media (min-width: 600px) {
+  @media (min-width: 300px) {
     .project-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
       margin: auto;
+      max-width: 700px;
     }
     .project-card {
       width: calc(90% - 50px); /* Largura dos cartões com margem */
