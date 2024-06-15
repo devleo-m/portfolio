@@ -528,7 +528,7 @@ display: none;
   #projects h1 {
     margin: 20px;
     text-align: center;
-    color: var(--verde);
+    color: #e7ede3;
     font-size: 1.4rem;
   }
   
@@ -583,7 +583,7 @@ display: none;
   .status-project {
     display: flex;
     align-items: center; /* Alinha os itens verticalmente */
-    color: white; /* Cor do texto */
+    color: rgb(201, 209, 200); /* Cor do texto */
     height: 20px;
     margin: auto;
     width: 100%;
@@ -604,6 +604,19 @@ display: none;
     color: #818580;
     line-height: 1.5; /* Espaçamento entre linhas */
     font-size: 0.9em; /* Tamanho da fonte do parágrafo */
+  }
+
+  .container-seemore{
+    max-width: 660px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    text-decoration: none;
+  }
+
+  .loadMore{
+    cursor: pointer;
+    color: var(--verde) !important;
   }
   
   /* Cartões que devem ser mostrados */
@@ -636,3 +649,59 @@ display: none;
     pointer-events: none; /* Desativa eventos de clique */
     opacity: 0.5; /* Deixa o botão mais transparente para indicar que está desabilitado */
   }
+
+
+  /**************************************************************/
+  /*contact - formulario*/
+  
+  .container-contact {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: red;
+    margin: auto !important;
+  }
+  
+  .contact-img img {
+    width: 100%;
+  }
+  
+  form {
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .button {
+    text-align: right;
+  }
+  
+  .button button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .button button:hover {
+    background-color: #0056b3;
+  }
+  
